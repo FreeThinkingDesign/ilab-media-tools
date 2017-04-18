@@ -341,8 +341,8 @@ class ILabMediaS3Tool extends ILabMediaToolBase {
 		try
 		{
 		    $options = array();
-		    if ( $this->cacheControl !== "" ) {
-		        $options['params'] = array('CacheControl'=>$this->cacheControl);
+            if ( $this->cacheControl !== "" ) {
+                $options['params'] = array('CacheControl'=>$this->cacheControl);
             }
 
 			$result = $s3->upload($this->bucket,$prefix.$bucketFilename,$file,'public-read', $options);
